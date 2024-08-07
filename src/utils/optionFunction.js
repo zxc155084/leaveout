@@ -1,10 +1,10 @@
 import API from "@/api";
 
 /* 取得多個 下拉式選單*/
-function getOptionData(option_data) {
+function getOptionData(baseURL, option_data) {
   //取得下拉式選單的attrKeys
   let attrKeys = Object.keys(option_data);
-  API.optionApi.queryMulti(attrKeys).then((res) => {
+  API.optionApi.queryMulti(baseURL, attrKeys).then((res) => {
     // 複製res.data 到 option_data
     // Object.assign(option_data, res.data)
     // 根據attrKey 取得相對應的下拉式選單

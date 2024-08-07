@@ -87,6 +87,8 @@ const jsonObject = window.jsonObject ?? {
   endDate_enable: "false",
   memo_description: "意見",
   agree_description: "同意",
+  lpoApiUrl: "http://192.168.100.67:8100",
+  afApiUrl: "http://192.168.100.67:8200",
 };
 const form = reactive({
   name: jsonObject.name,
@@ -115,7 +117,7 @@ const option_data = reactive({
 onMounted(() => {
   //取得所有下拉式選單
   // Utils.OptionFunction.getOptionData(option_data);
-  Utils.OptionFunction.getOptionData(option_data);
+  Utils.OptionFunction.getOptionData(jsonObject.lpoApiUrl, option_data);
   console.log("option_data", option_data);
 });
 </script>

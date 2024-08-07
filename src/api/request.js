@@ -8,10 +8,7 @@ console.log("window.apiUrl:", window.apiUrl);
 
 // 创建axios实例
 const service = axios.create({
-  // baseURL: '/api_test', // api的base_url
-  // baseURL: process.env.VUE_APP_APIURL, // api的base_url
-  baseURL: window.apiUrl ?? apiUrl,
-  // baseURL: 'https://dona2-admin-api.luciditv.net/',
+  // baseURL: apiUrl, // api的base_url 由參數設定
   timeout: 300000, // 请求超时时间
 });
 
